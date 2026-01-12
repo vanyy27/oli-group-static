@@ -122,24 +122,32 @@
   box-shadow: 0 10px 26px rgba(11, 99, 255, 0.22);
 }
 
-   .og-name{
-  font-size: 26px;              /* más grande */
+  .og-name{
+  font-size: 28px;              /* un poquito más grande */
   font-weight: 900;
   letter-spacing: -0.02em;
   text-transform: lowercase;
   line-height: 1;
 
-  /* “3D” premium: gradiente + clip */
-  background: linear-gradient(180deg, #2b8fff 0%, #0B63FF 45%, #0646c8 100%);
+  /* Gradiente (3D limpio) */
+  background: linear-gradient(180deg,
+    #7cc6ff 0%,
+    #2b8fff 22%,
+    #0B63FF 55%,
+    #063aa8 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 
-  /* profundidad sin exagerar */
+  /* Profundidad SIN halo feo */
   text-shadow:
-    0 1px 0 rgba(255,255,255,0.55),
-    0 10px 18px rgba(11,99,255,0.20),
-    0 1px 2px rgba(0,0,0,0.10);
+    0 2px 10px rgba(0,0,0,0.12),
+    0 10px 22px rgba(11,99,255,0.18);
+
+  /* Suavizado */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
 
     .og-tag{
