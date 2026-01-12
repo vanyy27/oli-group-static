@@ -101,26 +101,38 @@
   transform: translateY(-1px); /* sube 1px para que se vea “centrado” con el círculo */
 }
 
-    .og-mark{
+   .og-mark{
   width: 80px;
   height: 80px;
   border-radius: 999px;
+  position: relative;
+  overflow: hidden;
 
-  /* en vez de centro, abajo-izquierda */
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 0 0 10px 12px;
-
-  font-weight: 900;
-  font-size: 20px;
-  letter-spacing: -0.03em;
-  line-height: 1;
-
-  color:#fff;
   background: radial-gradient(circle at 30% 25%, #bfe6ff 0%, #2a8cff 55%, #0B63FF 100%);
   box-shadow: 0 10px 26px rgba(11, 99, 255, 0.22);
 }
+
+.og-mark-svg{
+  position:absolute;
+  inset: 0;
+  width:100%;
+  height:100%;
+}
+
+/* texto curvo “abrazando” */
+.og-mark-text{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  fill: rgba(255,255,255,0.92);
+}
+
+/* (opcional) un mini glow para que se lea siempre */
+.og-mark-text{
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.18));
+}
+
 .og-name{
   font-size: 28px;              /* un poquito más grande */
   font-weight: 900;
