@@ -96,13 +96,26 @@
     .og-brand{ text-decoration:none; color: var(--og-ink); }
     .og-brandtext{ display:flex; flex-direction:column; line-height:1.05; }
     .og-mark{
-      width: 40px; height: 40px; border-radius: 999px;
-      display:grid; place-items:center;
-      font-weight: 800; letter-spacing:-0.02em;
-      color:#fff;
-      background: radial-gradient(circle at 30% 25%, #bfe6ff 0%, #2a8cff 55%, #0B63FF 100%);
-      box-shadow: 0 8px 20px rgba(11, 99, 255, 0.22);
-    }
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+
+  /* en vez de centro, abajo-izquierda */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 0 10px 12px;
+
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+
+  color:#fff;
+  background: radial-gradient(circle at 30% 25%, #bfe6ff 0%, #2a8cff 55%, #0B63FF 100%);
+  box-shadow: 0 10px 26px rgba(11, 99, 255, 0.22);
+}
+
     .og-name{
       font-size: 18px; font-weight: 800; letter-spacing:-0.01em;
       color: var(--og-accent); text-transform: lowercase;
