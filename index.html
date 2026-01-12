@@ -5,41 +5,83 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>oli group — construcción infill & suburbana en DFW</title>
-  <meta name="description" content="Construcción nueva en DFW: infill y suburbios. Modelos para inversores: PM/GC, JV 100% capital, Deuda + Kicker.">
+  <meta name="description" content="Construcción nueva en D...delos para inversores: PM/GC, JV 100% capital, Deuda + Kicker.">
   <meta property="og:title" content="oli group — construcción infill & suburbana en DFW">
-  <meta property="og:description" content="Construcción nueva en DFW: infill y suburbios. Modelos para inversores: PM/GC, JV 100% capital, Deuda + Kicker.">
+  <meta property="og:description" content="Construcción nue...delos para inversores: PM/GC, JV 100% capital, Deuda + Kicker.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://oli-group.com/">
   <meta property="og:image" content="/oli-logo-lockup-blue-i-dot-BIGscaled-v5.svg">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect fill='%230A4CFF' x='32' y='32' width='448' height='448' rx='72'/%3E%3Ccircle fill='%23FFF' cx='256' cy='256' r='132'/%3E%3Ccircle fill='%230A4CFF' cx='256' cy='256' r='88'/%3E%3Crect fill='%230A4CFF' x='320' y='240' width='36' height='100' rx='18'/%3E%3Crect fill='%230A4CFF' x='256' y='240' width='64' height='36' rx='18'/%3E%3Ccircle fill='%230A4CFF' cx='338' cy='219' r='19'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='84' viewBox='0 0 1100 220'%3E%3Crect fill='%230A4CFF' x='0' y='0' width='220' height='220' rx='35.357'/%3E%3Ccircle fill='%23FFFFFF' cx='110' cy='110' r='64.732'/%3E%3Ccircle fill='%230A4CFF' cx='110' cy='110' r='43.214'/%3E%3Crect fill='%230A4CFF' x='145.714' y='103.571' width='17.647' height='49.107' rx='8.824'/%3E%3Crect fill='%230A4CFF' x='110.000' y='103.571' width='31.429' height='17.143' rx='8.571'/%3E%3Ccircle fill='%230A4CFF' cx='160.179' cy='121.741' r='9.330'/%3E%3Ctext x='250' y='125' font-family='system-ui,-apple-system,Segoe UI,Roboto,Arial' font-weight='800' font-size='108' fill='%230A4CFF' style='text-transform:lowercase' %3Eoli group%3C/text%3E%3Ccircle fill='%230A4CFF' cx='338' cy='219' r='19'/%3E%3C/svg%3E">
   <script src="https://cdn.tailwindcss.com"></script>
 
-<script type="application/ld+json">{ "@context":"https://schema.org", "@type":"HomeAndConstructionBusiness", "@id":"https://oli-group.com/#org", "name":"oli group", "alternateName":"oli group llc", "url":"https://oli-group.com/", "telephone":"+1-469-438-6689", "email":"ramos@oli-group.com", "priceRange":"$$$", "areaServed":["Dallas-Fort Worth, TX","Denton County, TX","Rockwall County, TX","Ellis County, TX"], "address":{"@type":"PostalAddress","streetAddress":"ACTUALIZA_AQUI","addressLocality":"Dallas","addressRegion":"TX","postalCode":"ACTUALIZA_AQUI","addressCountry":"US"}, "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"}] }</script>
+  <style>
+    :root{
+      --og-accent: #0B63FF;
+      --og-muted: #6b7280;
+      --og-ink: #0b1220;
+    }
+    .og-brand{ text-decoration:none; color: var(--og-ink); }
+    .og-brandtext{ display:flex; flex-direction:column; line-height:1.05; }
+    .og-mark{
+      width: 40px; height: 40px; border-radius: 999px;
+      display:grid; place-items:center;
+      font-weight: 800; letter-spacing:-0.02em;
+      color:#fff;
+      background: radial-gradient(circle at 30% 25%, #bfe6ff 0%, #2a8cff 55%, #0B63FF 100%);
+      box-shadow: 0 8px 20px rgba(11, 99, 255, 0.22);
+    }
+    .og-name{
+      font-size: 18px; font-weight: 800; letter-spacing:-0.01em;
+      color: var(--og-accent); text-transform: lowercase;
+    }
+    .og-tag{
+      font-size: 12px; color: var(--og-muted); margin-top: 2px;
+      text-transform: lowercase;
+    }
+    @media (max-width: 640px){ .og-tag{ display:none; } }
+
+    /* --- Motion minimal (hero glow) --- */
+    @keyframes floatGlow1 {
+      0% { transform: translate(-2%, -1%) scale(1.02); }
+      50% { transform: translate(2%, 1%) scale(1.06); }
+      100% { transform: translate(-2%, -1%) scale(1.02); }
+    }
+    @keyframes floatGlow2 {
+      0% { transform: translate(2%, 1%) scale(1.01); }
+      50% { transform: translate(-2%, -1%) scale(1.05); }
+      100% { transform: translate(2%, 1%) scale(1.01); }
+    }
+    .glow-1 { animation: floatGlow1 10s ease-in-out infinite; }
+    .glow-2 { animation: floatGlow2 12s ease-in-out infinite; }
+
+    /* --- Reveal on scroll --- */
+    .reveal{
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .55s ease, transform .55s ease;
+      will-change: opacity, transform;
+    }
+    .reveal.is-visible{ opacity: 1; transform: translateY(0); }
+
+    @media (prefers-reduced-motion: reduce){
+      .glow-1, .glow-2 { animation: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+  </style>
+
+<script type="application/ld+json">{ "@context":"https://schema.org","@type":"LocalBusiness","name":"oli group","url":"https://oli-group.com/","image":"https://oli-group.com/oli-logo-lockup-blue-i-dot-BIGscaled-v5.svg","email":"ramos@oli-group.com","telephone":"+1 469 438 6689","areaServed":"Dallas–Fort Worth (DFW)","description":"SFR nuevos en DFW para inversores: PM/GC, JV 100% capital, deuda + kicker.","sameAs":["https://oli-group.com/"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"}] }</script>
 </head>
 <body class="bg-slate-50 text-slate-900">
   <header class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="h-12 flex items-center">
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="84" viewBox="0 0 1100 220" aria-label="oli group">
-  <g transform="translate(0,0)">
-    <rect fill="#0A4CFF" x="0" y="0" width="220" height="220" rx="35.357"/>
-    <circle fill="#FFFFFF" cx="110.000" cy="110.000" r="64.732"/>
-    <circle fill="#0A4CFF"  cx="110.000" cy="110.000" r="43.214"/>
-    <rect fill="#0A4CFF" x="145.714" y="103.571" width="17.647" height="49.107" rx="8.824"/>
-    <rect fill="#0A4CFF" x="110.000" y="103.571" width="31.429" height="17.143" rx="8.571"/>
-    <circle fill="#0A4CFF" cx="160.179" cy="121.741" r="9.330"/>
-  </g>
-  <style>
-    .text { font: 800 108px system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif; letter-spacing: 2px; fill:#0A4CFF; text-transform: lowercase; }
-    .sub  { font: 500 24px system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif; letter-spacing: 1.5px; fill:#0A4CFF; text-transform: lowercase; }
-  </style>
-  <g transform="translate(250,0)">
-    <text class="text" x="0" y="125">oli group</text>
-    <text class="sub"  x="0" y="170">infill & suburban new builds across dfw</text>
-  </g>
-</svg>
-</div>
+        <a class="og-brand h-12 flex items-center gap-3" href="/" aria-label="oli group — inicio">
+          <span class="og-mark" aria-hidden="true">oli</span>
+          <span class="og-brandtext">
+            <span class="og-name">oli group</span>
+            <span class="og-tag">construcción infill &amp; suburbana en DFW</span>
+          </span>
+        </a>
         <span class="text-xs text-slate-500 hidden sm:inline">DFW • Español/English</span>
       </div>
       <nav class="flex items-center gap-2">
@@ -47,31 +89,36 @@
         <a href="#prueba" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-sm">Prueba</a>
         <a href="#plan" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-sm">Plan</a>
         <a href="/en/" class="px-3 py-2 rounded-lg text-sm border border-slate-200">EN</a>
-        <a href="mailto:ramos@oli-group.com?subject=Intro%20Call%20DFW" class="ml-2 bg-slate-900 text-white px-4 py-2 rounded-xl text-sm">Email</a>
-        <a href="https://wa.me/14694386689?text=Hola%2C%20quiero%20agendar%2015%20min%20sobre%20inversi%C3%B3n%20DFW." target="_blank" class="px-4 py-2 rounded-xl text-sm border border-slate-300">WhatsApp</a>
+        <a href="mailto:ramos@oli-group.com?subject=Intro%20Call%20DFW" class="ml-2 bg-[#0B63FF] hover:bg-[#0a58e0] text-white px-4 py-2 rounded-xl text-sm">Email</a>
+        <a href="https://wa.me/14694386689?text=Hola%2C%20quiero%20hablar%20sobre%20un%20deal%20en%20DFW." class="bg-white hover:bg-slate-50 px-4 py-2 rounded-xl text-sm border border-slate-300">WhatsApp</a>
       </nav>
     </div>
   </header>
 
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-white"></div>
+    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full blur-3xl glow-1" style="background: rgba(11,99,255,.18);"></div>
+    <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full blur-3xl glow-2" style="background: rgba(56,189,248,.16);"></div>
+
     <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <div class="inline-flex items-center gap-2 text-xs text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full mb-4">
+        <div class="reveal inline-flex items-center gap-2 text-xs text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full mb-4">
           <span>✔</span><span>obras infill & suburbano • dfw</span>
         </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
+        <h1 class="reveal text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
           ejecución sin drama.<br> tú aportas capital.<br> yo entrego: tiempo, costo, margen.
         </h1>
-        <p class="mt-4 text-slate-600">
+        <p class="reveal mt-4 text-slate-600">
           30 años construyendo (3 en USA). SFR nuevos en DFW. Modelos: PM/GC, JV 100% capital, Deuda + Kicker.
         </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#oferta" class="bg-slate-900 text-white px-5 py-3 rounded-xl text-sm">Ver oferta</a>
-          <a href="#prueba" class="px-5 py-3 rounded-xl text-sm border border-slate-300">Ver prueba</a>
-          <a href="tel:+14694386689" class="px-5 py-3 rounded-xl text-sm border border-slate-300">Llamar</a>
+
+        <div class="reveal mt-6 flex flex-wrap gap-3">
+          <a href="#oferta" class="bg-[#0B63FF] hover:bg-[#0a58e0] text-white px-5 py-3 rounded-xl text-sm">Ver oferta</a>
+          <a href="#prueba" class="bg-white hover:bg-slate-50 px-5 py-3 rounded-xl text-sm border border-slate-300">Ver prueba</a>
+          <a href="tel:+14694386689" class="bg-white hover:bg-slate-50 px-5 py-3 rounded-xl text-sm border border-slate-300">Llamar</a>
         </div>
-        <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+
+        <div class="reveal mt-6 grid grid-cols-3 gap-3 text-center">
           <div class="bg-white rounded-xl border p-3">
             <div class="text-xs text-slate-500">retornos proyecto</div>
             <div class="text-lg font-bold">10–40%</div>
@@ -86,7 +133,8 @@
           </div>
         </div>
       </div>
-      <div class="relative">
+
+      <div class="reveal relative">
         <div class="bg-white border rounded-2xl p-5 shadow-sm">
           <h3 class="font-bold">¿qué hacemos?</h3>
           <ul class="mt-2 space-y-2 text-slate-700 text-sm">
@@ -108,19 +156,19 @@
     <h2 class="text-2xl font-bold">Oferta — elige el vehículo</h2>
     <div class="mt-4 grid md:grid-cols-3 gap-4">
       <div class="bg-white border rounded-2xl p-5">
-        <div class="text-xs text-slate-500 mb-1">modelo</div>
-        <h3 class="font-semibold">PM/GC</h3>
-        <p class="mt-2 text-sm text-slate-600">Retainer semanal + 4–8% hard. Pagos contra evidencia. Reportes semanales.</p>
+        <div class="text-xs text-slate-500">modelo</div>
+        <h3 class="mt-1 text-lg font-bold">PM/GC</h3>
+        <p class="mt-2 text-sm text-slate-700">Retainer semanal + 4–8% hard. Pagos contra evidencia. Reportes semanales.</p>
       </div>
       <div class="bg-white border rounded-2xl p-5">
-        <div class="text-xs text-slate-500 mb-1">modelo</div>
-        <h3 class="font-semibold">JV 100% capital</h3>
-        <p class="mt-2 text-sm text-slate-600">Gestor $1,200/sem (60%/40%). Retorno de capital → 50/50 utilidad.</p>
+        <div class="text-xs text-slate-500">modelo</div>
+        <h3 class="mt-1 text-lg font-bold">JV 100% capital</h3>
+        <p class="mt-2 text-sm text-slate-700">Gestor $1,200/sem (60%/40%). Retorno de capital → 50/50 utilidad.</p>
       </div>
       <div class="bg-white border rounded-2xl p-5">
-        <div class="text-xs text-slate-500 mb-1">modelo</div>
-        <h3 class="font-semibold">Debt + Kicker</h3>
-        <p class="mt-2 text-sm text-slate-600">10% + 2 pts + 10% utilidad (cap). Escrow y liberaciones.</p>
+        <div class="text-xs text-slate-500">modelo</div>
+        <h3 class="mt-1 text-lg font-bold">Debt + Kicker</h3>
+        <p class="mt-2 text-sm text-slate-700">10% + 2 pts + 10% utilidad (cap). Escrow y liberaciones.</p>
       </div>
     </div>
   </section>
@@ -129,16 +177,16 @@
     <h2 class="text-2xl font-bold">Prueba — proyectos y números</h2>
     <div class="mt-4 grid md:grid-cols-3 gap-4">
       <div class="bg-white border rounded-2xl p-5">
-        <h4 class="font-semibold">Deal #1</h4>
-        <p class="mt-1 text-sm text-slate-600">$380k / ~$300k / 6–7 mo / $70–80k</p>
+        <h3 class="font-bold">Deal #1</h3>
+        <p class="mt-2 text-sm text-slate-700">$380k / ~$300k / 6–7 mo / $70–80k</p>
       </div>
       <div class="bg-white border rounded-2xl p-5">
-        <h4 class="font-semibold">Deal #2</h4>
-        <p class="mt-1 text-sm text-slate-600">$380k / ~$300k / 6–7 mo / $70–80k</p>
+        <h3 class="font-bold">Deal #2</h3>
+        <p class="mt-2 text-sm text-slate-700">$380k / ~$300k / 6–7 mo / $70–80k</p>
       </div>
       <div class="bg-white border rounded-2xl p-5">
-        <h4 class="font-semibold">Deal #3</h4>
-        <p class="mt-1 text-sm text-slate-600">$380k / ~$300k / 6–7 mo / $70–80k</p>
+        <h3 class="font-bold">Deal #3</h3>
+        <p class="mt-2 text-sm text-slate-700">$380k / ~$300k / 6–7 mo / $70–80k</p>
       </div>
     </div>
   </section>
@@ -160,10 +208,10 @@
         <h3 class="text-2xl font-bold">hablemos 15 minutos</h3>
         <p class="text-slate-300 mt-1 text-sm">dfw + suburbios. 1–2 proyectos por trimestre. respuesta en 24h.</p>
       </div>
-      <div class="flex flex-wrap gap-3 justify-end">
-        <a class="bg-white text-slate-900 px-5 py-3 rounded-xl text-sm" href="mailto:ramos@oli-group.com?subject=Intro%20Call%20DFW">Email</a>
-        <a class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-3 rounded-xl text-sm" target="_blank" href="https://wa.me/14694386689?text=Hola%2C%20quiero%20agendar%2015%20min%20sobre%20inversi%C3%B3n%20DFW.">WhatsApp</a>
-        <a class="bg-white/10 border border-white/20 text-white px-5 py-3 rounded-xl text-sm" href="tel:+14694386689">Llamar</a>
+      <div class="flex flex-wrap gap-3 md:justify-end">
+        <a href="mailto:ramos@oli-group.com?subject=Intro%20Call%20DFW" class="bg-white text-slate-900 px-5 py-3 rounded-xl text-sm">Email</a>
+        <a href="https://wa.me/14694386689?text=Hola%2C%20quiero%20hablar%20sobre%20un%20deal%20en%20DFW." class="bg-white/10 hover:bg-white/15 px-5 py-3 rounded-xl text-sm border border-white/20">WhatsApp</a>
+        <a href="tel:+14694386689" class="bg-white/10 hover:bg-white/15 px-5 py-3 rounded-xl text-sm border border-white/20">Llamar</a>
       </div>
     </div>
   </section>
@@ -179,7 +227,33 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // reveal on scroll
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+
+      const show = (el) => el.classList.add('is-visible');
+
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(show);
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            show(e.target);
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      els.forEach((el) => io.observe(el));
+    })();
   </script>
 </body>
 </html>
