@@ -267,7 +267,22 @@
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <a class="og-brand h-20 flex items-center gap:12px;" href="/en/" aria-label="oli group — home">
-          <span class="og-mark" aria-hidden="true">oli</span>
+          <span class="og-mark" aria-hidden="true">
+  <svg class="og-mark-svg" viewBox="0 0 100 100" role="img" aria-label="oli">
+    <defs>
+      <!-- curva pegada al borde inferior-izquierdo -->
+      <path id="og-curve" d="M 14 70 A 36 36 0 0 0 70 92" />
+    </defs>
+
+    <!-- texto curvo -->
+    <text class="og-mark-text">
+      <textPath href="#og-curve" startOffset="0%">
+        oli
+      </textPath>
+    </text>
+  </svg>
+</span>
+
           <span class="og-brandtext">
             <span class="og-name">oli group</span>
             <span class="ml-2 hidden sm:inline-flex items-center px-3 py-1 rounded-full text-xs border border-slate-200 bg-white/70 backdrop-blur">
