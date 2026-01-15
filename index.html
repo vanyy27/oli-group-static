@@ -108,25 +108,23 @@
   position: relative;
   overflow: hidden;
 
-  background: radial-gradient(circle at 30% 25%, #bfe6ff 0%, #2a8cff 55%, #0B63FF 100%);
-  box-shadow: 0 10px 26px rgba(11, 99, 255, 0.22);
-}
+  /* plano y con el mismo azul */
+  background: #0B63FF;
 
-.og-mark-svg{
-  position:absolute;
-  inset: 0;
-  width:100%;
-  height:100%;
+  /* sin sombra 3D */
+  box-shadow: none;
 }
+.og-mark-txt{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
 
-/* texto curvo “abrazando” */
-.og-mark-text{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
   font-weight: 900;
-  font-size: 22px;          /* MÁS grande */
+  font-size: 22px;
   letter-spacing: -0.03em;
-  fill: rgba(255,255,255,0.95);
-  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.18));
+  line-height: 1;
+  color: rgba(255,255,255,0.95);
 }
 
 
