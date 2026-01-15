@@ -14,7 +14,80 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='84' viewBox='0 0 1100 220'%3E%3Crect fill='%230A4CFF' x='0' y='0' width='220' height='220' rx='35.357'/%3E%3Ccircle fill='%23FFFFFF' cx='110' cy='110' r='64.732'/%3E%3Ccircle fill='%230A4CFF' cx='110' cy='110' r='43.214'/%3E%3Crect fill='%230A4CFF' x='145.714' y='103.571' width='17.647' height='49.107' rx='8.824'/%3E%3Crect fill='%230A4CFF' x='110.000' y='103.571' width='31.429' height='17.143' rx='8.571'/%3E%3Ccircle fill='%230A4CFF' cx='160.179' cy='121.741' r='9.330'/%3E%3Ctext x='250' y='125' font-family='system-ui,-apple-system,Segoe UI,Roboto,Arial' font-weight='800' font-size='108' fill='%230A4CFF' style='text-transform:lowercase' %3Eoli group%3C/text%3E%3Ccircle fill='%230A4CFF' cx='338' cy='219' r='19'/%3E%3C/svg%3E">
   <script src="https://cdn.tailwindcss.com"></script>
 
-  
+  /* --- Plan timeline --- */
+.og-timeline{
+  position: relative;
+  display: grid;
+  gap: 12px;
+}
+.og-step{
+  position: relative;
+  border: 1px solid rgba(12,23,48,0.10);
+  background: rgba(255,255,255,0.78);
+  border-radius: 16px;
+  padding: 14px;
+  overflow: hidden;
+}
+.og-step::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background: radial-gradient(320px 140px at 20% 0%, rgba(11,99,255,.14), transparent 60%);
+  opacity: 0;
+  transition: opacity .15s ease;
+  pointer-events:none;
+}
+.og-step:hover{
+  border-color: rgba(11,99,255,0.25);
+  box-shadow: 0 14px 38px rgba(0,0,0,0.08);
+}
+.og-step:hover::before{ opacity: 1; }
+
+.og-step-head{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.og-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #0B63FF;
+  box-shadow: 0 8px 18px rgba(11,99,255,0.20);
+  flex: 0 0 auto;
+}
+.og-step-title{
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.og-step-desc{
+  margin-top: 6px;
+  font-size: 14px;
+  color: #475569;
+}
+
+@media (min-width: 768px){
+  .og-timeline{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .og-step{
+    padding: 16px;
+    min-height: 128px;
+  }
+  /* línea conectora detrás */
+  .og-timeline::before{
+    content:"";
+    position:absolute;
+    left: 10px;
+    right: 10px;
+    top: 22px;
+    height: 1px;
+    background: rgba(12,23,48,0.10);
+    z-index: 0;
+  }
+  .og-step{ z-index: 1; }
+}
+
 <style>
   /* --- Proof snapshots: premium layout --- */
 .og-snap-media{ position: relative; }
