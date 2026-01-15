@@ -117,17 +117,24 @@
   box-shadow: none;
 }
 .og-mark-txt{
-  left: 9px;
-  bottom: 8px;
-  font-size: 25px;
+  position: absolute;
+
+  /* fuerza abajo-izquierda */
+  left: 8px;
+  bottom: 6px;
+
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
   font-weight: 900;
+  font-size: 25px;
   letter-spacing: -0.04em;
   line-height: 1;
-  color: rgba(255,255,255,0.95);
-.og-mark{ transition: transform .15s ease; }
-.og-brand:hover .og-mark{ transform: translateY(-1px); }
 
+  color: rgba(255,255,255,0.95);
+
+  /* asegúrate de que no esté moviéndose por transforms */
+  transform: none;
 }
+
 
 
 
